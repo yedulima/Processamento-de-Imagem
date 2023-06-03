@@ -3,7 +3,9 @@ import cv2
 from matplotlib import pyplot as plt
 
 imagem = cv2.imread("images/rua.jpg")
-imagem = cv2.resize(imagem, (0, 0), fx=2, fy=2)
+print(imagem.shape)
+imagem = cv2.resize(imagem, (275, 183))
+imagem = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
 
 def imgShow(imagem):
     imagem = cv2.cvtColor(imagem, cv2.COLOR_BGR2RGB)
@@ -19,7 +21,16 @@ def setRed(imagem):
 
     return imagem
 
+ret, mask = cv2.threshold(imagem, 100, 255, cv2.THRESH_BINARY)
+plt.imshow(mask)
+plt.show()
+
+if __name__ == "__main__":
+    print("Ata")
+
+'''
 imgShow(imagem)
 setRed(imagem)
 imgShow(imagem)
 cv2.imwrite("rua_vermelha.jpg", imagem)
+'''
