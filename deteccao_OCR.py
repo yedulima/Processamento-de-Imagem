@@ -4,7 +4,7 @@ import numpy as np
 import pytesseract
 from morfologia_matematica import processamentoImagem
 
-imagem = processamentoImagem("images/placa_carro2.jpg")
+imagem = processamentoImagem("images/placa_carro1.jpg")
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
