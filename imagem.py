@@ -13,7 +13,7 @@ def imgShow(imagem):
     plt.show()
 
 def setRed(imagem):
-    height, width, color = imagem.shape
+    height, width = imagem.shape[:2]
     for y in range(height):
         for x in range(width):
             imagem.itemset((y, x, 0), 2)
