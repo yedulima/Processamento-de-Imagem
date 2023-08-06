@@ -22,5 +22,5 @@ cv.drawContours(img, [t4], 0, (0, 255, 255), -1)
 # Circulo
 cv.circle(img, (x // 2, y // 2), 50, (255, 0, 0), -1)
 
-cv.imshow('Bandeira do Brasil', img)
+cv.imshow('Bandeira do Brasil', img)  
 cv.waitKey(0)
