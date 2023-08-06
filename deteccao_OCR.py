@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import cv2
 import numpy as np
 import pytesseract
-from morfologia_matematica import processamentoImagem
+from MorfologiaMatematica import processamentoImagem
 
 imagem = processamentoImagem("images/placa_carro1.jpg")
 

@@ -1,13 +1,8 @@
 import cv2 as cv
 
-img = cv.imread('images/rua.jpg')
+img = cv.imread('images/rua.jpg', 0)
 
-altura, largura = img.shape[0], img.shape[1]
+ret, thresh = cv.threshold(img, 127, 255, cv.THRESH_BINARY)
 
-for y in range(altura):
-    for x in range(largura):
-        img.itemset((y, x, 0), 2)
-        img.itemset((y, x, 1), 2)
-
-cv.imshow('Rua', img)
+cv.imshow('Rua', thresh)
 cv.waitKey(0)
