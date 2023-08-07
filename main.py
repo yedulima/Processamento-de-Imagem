@@ -1,8 +1,10 @@
 import cv2 as cv
 
-img = cv.imread('images/rua.jpg', 0)
+img = cv.imread('images/rua.jpg', )
 
-ret, thresh = cv.threshold(img, 127, 255, cv.THRESH_BINARY)
+#img = cv.Sobel(img, cv.CV_8U, 1, 0)
+imgBlur = cv.GaussianBlur(img, (3, 3), 0)
 
-cv.imshow('Rua', thresh)
+cv.imshow('Rua', img)
+cv.imshow('Rua Blur', imgBlur)
 cv.waitKey(0)
